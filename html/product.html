@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Aesthetic Kita | ThriftVibe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffd9df",
+                    "surface": "#fcf9f8",
+                    "sun-yellow": "#FEEC41",
+                    "inverse-surface": "#313030",
+                    "surface-container": "#f0eded",
+                    "secondary-fixed-dim": "#dac917",
+                    "outline": "#906f6e",
+                    "on-secondary-container": "#6d6400",
+                    "on-tertiary-fixed": "#3f0017",
+                    "surface-tint": "#bf002c",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#ffb1c1",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e5bdbc",
+                    "background": "#fcf9f8",
+                    "secondary-container": "#f4e237",
+                    "blush-base": "#F13E5A",
+                    "secondary-fixed": "#f7e53a",
+                    "on-secondary-fixed-variant": "#4f4800",
+                    "primary": "#ad0027",
+                    "on-tertiary-fixed-variant": "#89153e",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-bright": "#fcf9f8",
+                    "eco-maroon": "#760031",
+                    "on-secondary-fixed": "#1f1c00",
+                    "inverse-primary": "#ffb3b2",
+                    "on-tertiary-container": "#ffecee",
+                    "secondary": "#686000",
+                    "primary-container": "#d51c39",
+                    "tertiary-container": "#bd3f64",
+                    "primary-fixed": "#ffdad9",
+                    "tertiary": "#9d264c",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#920020",
+                    "on-background": "#1c1b1b",
+                    "on-surface-variant": "#5c3f3f",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#410008",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "earth-moss": "#C5B518",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "surface-variant": "#e5e2e1",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#ffeceb",
+                    "vibe-red": "#FF6060"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px",
+                    "stack-sm": "4px",
+                    "gutter": "16px",
+                    "container-margin": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Bricolage Grotesque"],
+                    "headline-lg": ["Bricolage Grotesque"],
+                    "label-bold": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-xl": ["Bricolage Grotesque"],
+                    "tagline": ["Bricolage Grotesque"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "tagline": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(118, 0, 49, 1);
+        }
+        .hard-shadow-hover:hover {
+            box-shadow: 0px 0px 0px 0px rgba(118, 0, 49, 1);
+            transform: translate(2px, 2px);
+        }
+        .btn-active:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<nav class="bg-surface dark:bg-inverse-surface border-b-2 border-on-surface-variant docked full-width top-0 z-50 sticky shadow-[4px_4px_0px_0px_rgba(118,0,49,1)]">
+<div class="flex justify-between items-center px-container-margin h-20 w-full max-w-7xl mx-auto">
+<a class="font-headline-lg text-headline-lg font-black text-primary dark:text-vibe-red" href="#">ThriftVibe</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Earth-Friendly</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-primary hover:translate-x-[2px] hover:translate-y-[2px] transition-all">shopping_cart</button>
+<button class="md:hidden material-symbols-outlined text-on-surface">menu</button>
+</div>
+</div>
+</nav>
+<!-- Conscious Messaging Bar -->
+<div class="w-full bg-earth-moss py-2 text-center overflow-hidden whitespace-nowrap">
+<div class="inline-block animate-marquee font-label-bold text-label-bold text-white uppercase tracking-wider">
+            ✨ Sustainable Fashion is the Flex • Saved 200L of water this month • 100% Curated Secondhand Gems ✨
+        </div>
+</div>
+<main class="max-w-7xl mx-auto px-container-margin py-stack-lg">
+<!-- Page Heading -->
+<header class="mb-section-gap">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">Katalog Aesthetic Kita</h1>
+<p class="font-tagline text-tagline text-on-surface-variant">Temukan gaya unikmu sambil tetap sayang bumi. Check it out!</p>
+</header>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filter -->
+<aside class="w-full md:w-64 flex-shrink-0">
+<div class="bg-surface-container-low p-stack-lg border-2 border-on-surface-variant hard-shadow sticky top-28">
+<div class="flex items-center gap-2 mb-stack-lg">
+<span class="material-symbols-outlined text-primary">tune</span>
+<h2 class="font-label-bold text-label-bold uppercase">Filter Vibes</h2>
+</div>
+<!-- Category -->
+<div class="mb-stack-lg">
+<p class="font-label-bold mb-2">Pilih Kategori</p>
+<div class="space-y-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded-none border-2 border-on-surface-variant text-primary focus:ring-sun-yellow" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Semua Item</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="rounded-none border-2 border-on-surface-variant text-primary focus:ring-sun-yellow" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Atasan</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded-none border-2 border-on-surface-variant text-primary focus:ring-sun-yellow" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Bawahan</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded-none border-2 border-on-surface-variant text-primary focus:ring-sun-yellow" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">Outerwear</span>
+</label>
+</div>
+</div>
+<!-- Price -->
+<div class="mb-stack-lg">
+<p class="font-label-bold mb-2">Budget Ramah Kantong</p>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" max="200000" min="0" step="10000" type="range"/>
+<div class="flex justify-between mt-2 font-label-bold text-on-surface-variant">
+<span>Rp 0</span>
+<span>Rp 200rb</span>
+</div>
+</div>
+<!-- Vibe -->
+<div class="mb-stack-lg">
+<p class="font-label-bold mb-2">Vibe Kamu?</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1 bg-sun-yellow text-on-secondary-fixed font-label-bold rounded-full border-2 border-on-surface-variant text-xs hard-shadow-hover transition-all">Retro</button>
+<button class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-bold rounded-full border-2 border-on-surface-variant text-xs hover:bg-sun-yellow transition-all">Y2K</button>
+<button class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-bold rounded-full border-2 border-on-surface-variant text-xs hover:bg-sun-yellow transition-all">Earth-Tone</button>
+<button class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-bold rounded-full border-2 border-on-surface-variant text-xs hover:bg-sun-yellow transition-all">Street</button>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-3 font-label-bold uppercase border-2 border-on-surface-variant hard-shadow hard-shadow-hover btn-active">
+                        Reset Filter
+                    </button>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-white border-2 border-on-surface-variant group flex flex-col hard-shadow transition-transform hover:-translate-y-1">
+<div class="relative overflow-hidden aspect-[4/5] border-b-2 border-on-surface-variant">
+<img alt="Retro Flannel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A vintage retro oversized flannel shirt with a classic plaid pattern in shades of red, navy, and cream. The shirt is displayed on a stylish mannequin in a vibrant, sun-drenched studio filled with 90s retro decorations. The lighting is bright and energetic, emphasizing the rich fabric texture and high-contrast aesthetic of ThriftVibe. The overall mood is cool, casual, and trend-setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgwK9WuC1Eaxh8Mpw-atCWNNV6_KxEAE9mbRyPo5rv_ydRvE5FuVY2sO9WjtxU8xsa5Qtwc38PZiC5_4cD3Z2WjTZKufpmS1MDGk-iULaYDgPYEnvVFpbj9Ajf7zC18ssO6fdwfqyhif3dfo3RpzDeXrHi4sF-3nXqfh9fyw9he86XDmQ95ROYhpzSWu0G5AmP6v1s-wXplrkcj51t8pnMR4Yqz9kH8dtVnGWQZrvrbeU40ILH0dc5OHXSNGU9MSEiEdILfvnu4Wvf"/>
+<div class="absolute top-4 left-4">
+<span class="bg-sun-yellow text-on-secondary-fixed px-3 py-1 font-label-bold border-2 border-on-surface-variant text-sm">Retro Vibe</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-lg text-lg mb-1 leading-tight group-hover:text-primary transition-colors">Retro Oversized Flannel Shirt</h3>
+<p class="text-eco-maroon font-headline-lg text-xl mb-4">Rp 85.000</p>
+<div class="mt-auto">
+<button class="w-full bg-vibe-red text-white py-3 font-label-bold border-2 border-on-surface-variant hard-shadow-hover btn-active transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                    Vibe Check
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border-2 border-on-surface-variant group flex flex-col hard-shadow transition-transform hover:-translate-y-1">
+<div class="relative overflow-hidden aspect-[4/5] border-b-2 border-on-surface-variant">
+<img alt="Y2K Cargo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern Y2K denim cargo pants with multiple pockets and a wide-leg silhouette. The pants are styled with chunky sneakers in a vibrant urban setting with street art backgrounds. High-contrast colors of deep denim blue and bright yellow accents dominate the frame. The lighting is direct and bold, capturing the edgy and relatable confidence of Gen-Z fashion trends." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALpUrJ87hHAec1hX3Fj2cA9hlWgoiwk8AnBXX4VkGGfUaTT2HlHLXfPdsJ_KbFfVb3OOupyccHPqhVYRdbuGpDURsjWJe65OVZlto07zFZNCypPqlBdxGG8gZtoUg403Z901_FxeS5MDBHmeuhU_7xVFzXSgAYkeaHT0KyJjtQJdu42NFXsjYNVyVHFCIkHJb_TWeMpY5xSWlWhBYWP-IC66Mhi-lc9l4wswGgsjCiAXxugHpN0sIvfdaRgDGjIQGx_xzoINHcJ48I"/>
+<div class="absolute top-4 left-4">
+<span class="bg-sun-yellow text-on-secondary-fixed px-3 py-1 font-label-bold border-2 border-on-surface-variant text-sm">Trending Y2K</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-lg text-lg mb-1 leading-tight group-hover:text-primary transition-colors">Y2K Denim Cargo Pants</h3>
+<p class="text-eco-maroon font-headline-lg text-xl mb-4">Rp 125.000</p>
+<div class="mt-auto">
+<button class="w-full bg-vibe-red text-white py-3 font-label-bold border-2 border-on-surface-variant hard-shadow-hover btn-active transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                    Vibe Check
+                                </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white border-2 border-on-surface-variant group flex flex-col hard-shadow transition-transform hover:-translate-y-1">
+<div class="relative overflow-hidden aspect-[4/5] border-b-2 border-on-surface-variant">
+<img alt="Knit Vest" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cozy earth tone knit vest in warm beige and olive green colors, featuring a delicate cable-knit pattern. The vest is flat-laid on a bed of recycled autumn leaves, symbolizing the eco-conscious brand identity. Soft, warm sunlight filters through a window, creating a serene and premium feel. The color palette consists of earth-moss, blush-base, and neutral tones, perfectly aligned with a sustainable lifestyle vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqor5RWFpUOKcG5nmN3LVJNqfIO-R4KWMzyx6qJToJbJDmHhIjkwtPioePVUaBNEyQAWWJIcCccB7Q8VBqIWZjXKlcXWj6azG5amb8b2rR1OoeVa2l8DjIZ6iDLisHLDK04BxGgB941H4nBQwqZbz5A5Fup1M2rASTia3BjBRU_sPPEwXD0XszaBUQimgdOG1Fqgc_Y7Dph8m0UVplxdmhGId_rbvfxSn6vrcPp_lwpkjpwdFBCg-RZGHQNvz8ES6-x9n5FOgW8G--"/>
+<div class="absolute top-4 left-4">
+<span class="bg-sun-yellow text-on-secondary-fixed px-3 py-1 font-label-bold border-2 border-on-surface-variant text-sm">Eco Choice</span>
+</div>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="font-headline-lg text-lg mb-1 leading-tight group-hover:text-primary transition-colors">Earth Tone Knit Vest</h3>
+<p class="text-eco-maroon font-headline-lg text-xl mb-4">Rp 70.000</p>
+<div class="mt-auto">
+<button class="w-full bg-vibe-red text-white py-3 font-label-bold border-2 border-on-surface-variant hard-shadow-hover btn-active transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                                    Vibe Check
+                                </button>
+</div>
+</div>
+</div>
+<!-- More products could go here, maintaining the discovery feel -->
+<div class="col-span-full py-12 flex flex-col items-center justify-center border-4 border-dashed border-surface-container-highest rounded-xl bg-surface-container-low text-center p-8">
+<span class="material-symbols-outlined text-6xl text-surface-container-highest mb-4">admob</span>
+<h4 class="font-tagline text-tagline text-on-surface-variant mb-2">Lagi cari yang lain?</h4>
+<p class="max-w-md mx-auto text-on-surface-variant mb-6">Belum nemu yang pas di hati? Kita update katalog setiap hari Selasa &amp; Jumat jam 4 sore lho! Stay tuned ya bestie.</p>
+<button class="bg-white text-primary border-2 border-primary px-8 py-3 font-label-bold hard-shadow hard-shadow-hover transition-all">
+                            Ingetin Aku Pas Drop Baru
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t-2 border-eco-maroon mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-container-margin w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-lg text-headline-lg font-black text-eco-maroon">ThriftVibe</span>
+<p class="text-on-surface-variant mt-2 font-body-md text-body-md text-center md:text-left max-w-xs">© 2024 ThriftVibe. Good for the planet, better for your style.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">TikTok</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Bar (Always at bottom for mobile) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t-2 border-on-surface-variant z-50 flex justify-around items-center h-16 px-4">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-label-bold">Shop</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-label-bold">Cari</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-label-bold">Wishlist</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-label-bold">Akun</span>
+</button>
+</div>
+<script>
+        // Micro-interaction for filter chips
+        document.querySelectorAll('button[class*="rounded-full"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if(this.classList.contains('bg-sun-yellow')) {
+                    this.classList.remove('bg-sun-yellow', 'text-on-secondary-fixed');
+                    this.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+                } else {
+                    this.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+                    this.classList.add('bg-sun-yellow', 'text-on-secondary-fixed');
+                }
+            });
+        });
+
+        // Simple smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

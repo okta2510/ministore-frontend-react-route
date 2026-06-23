@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ThriftVibe | Temukan Vibe-mu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffd9df",
+                        "surface": "#fcf9f8",
+                        "sun-yellow": "#FEEC41",
+                        "inverse-surface": "#313030",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed-dim": "#dac917",
+                        "outline": "#906f6e",
+                        "on-secondary-container": "#6d6400",
+                        "on-tertiary-fixed": "#3f0017",
+                        "surface-tint": "#bf002c",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-fixed-dim": "#ffb1c1",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#e5bdbc",
+                        "background": "#fcf9f8",
+                        "secondary-container": "#f4e237",
+                        "blush-base": "#F13E5A",
+                        "secondary-fixed": "#f7e53a",
+                        "on-secondary-fixed-variant": "#4f4800",
+                        "primary": "#ad0027",
+                        "on-tertiary-fixed-variant": "#89153e",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-bright": "#fcf9f8",
+                        "eco-maroon": "#760031",
+                        "on-secondary-fixed": "#1f1c00",
+                        "inverse-primary": "#ffb3b2",
+                        "on-tertiary-container": "#ffecee",
+                        "secondary": "#686000",
+                        "primary-container": "#d51c39",
+                        "tertiary-container": "#bd3f64",
+                        "primary-fixed": "#ffdad9",
+                        "tertiary": "#9d264c",
+                        "inverse-on-surface": "#f3f0ef",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#920020",
+                        "on-background": "#1c1b1b",
+                        "on-surface-variant": "#5c3f3f",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#410008",
+                        "on-surface": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "earth-moss": "#C5B518",
+                        "primary-fixed-dim": "#ffb3b2",
+                        "surface-variant": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#ffeceb",
+                        "vibe-red": "#FF6060"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "64px",
+                        "base": "8px",
+                        "stack-md": "12px",
+                        "stack-lg": "24px",
+                        "stack-sm": "4px",
+                        "gutter": "16px",
+                        "container-margin": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Bricolage Grotesque"],
+                        "headline-lg": ["Bricolage Grotesque"],
+                        "label-bold": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-xl": ["Bricolage Grotesque"],
+                        "tagline": ["Bricolage Grotesque"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "tagline": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(118, 0, 49, 1);
+        }
+        .hard-shadow-black {
+            box-shadow: 4px 4px 0px 0px rgba(28, 27, 27, 1);
+        }
+        .btn-active:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+        }
+        .vibe-card-hover:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px rgba(118, 0, 49, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b-2 border-on-surface-variant sticky top-0 z-50 h-20 w-full shadow-[4px_4px_0px_0px_rgba(118,0,49,1)]">
+<div class="flex justify-between items-center px-container-margin h-full w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-base">
+<img alt="ThriftVibe Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9hzYEjAUCPLm2TcVTIG-CgoPaixYcNmxXJtQRhTaMdwenajyRbUO4lvImHGZd2jTrL_3ygu7O5Hgiz_JJDo5ccodUtCS8lytAq7DYw6UJvzKv6K1jb7uxHFpYMgmCYBpxV5D2winaaraM8eD57VlpSuWXcqkahk8exIxo0mvoiZixEd7BVEc30UjFcVBCuOJpkVllMbDAWT6LFzb7D9jjrnm60LLhxeUo8L9CbEVbEkdnq_QcRQ0SFy60yLIbzTB9WX44fqnntxSe"/>
+<span class="font-headline-lg text-headline-lg font-black text-primary">ThriftVibe</span>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Earth-Friendly</a>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">search</span>
+</div>
+<button class="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-primary-fixed transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Conscious Messaging Bar -->
+<div class="bg-earth-moss text-surface w-full py-2 flex justify-center items-center gap-base overflow-hidden whitespace-nowrap">
+<div class="animate-marquee flex gap-12 items-center">
+<span class="font-label-bold text-label-bold uppercase">⚡ Terhemat 200L air per baju</span>
+<span class="font-label-bold text-label-bold uppercase">🌱 100% Eco-Conscious Packaging</span>
+<span class="font-label-bold text-label-bold uppercase">✨ Kurasi Vintage Terbaik</span>
+<span class="font-label-bold text-label-bold uppercase">⚡ Terhemat 200L air per baju</span>
+<span class="font-label-bold text-label-bold uppercase">🌱 100% Eco-Conscious Packaging</span>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden py-section-gap">
+<div class="container mx-auto px-container-margin grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="flex flex-col gap-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">
+                    Temukan <span class="bg-sun-yellow px-2 hard-shadow-black inline-block -rotate-1">Vibe-mu</span>,<br/>
+                    Jemput <span class="text-blush-base">Gaya-mu.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    Bosan dengan fast-fashion yang itu-itu aja? Saatnya beralih ke koleksi pre-loved pilihan yang bikin gaya makin unik dan bumi makin sehat.
+                </p>
+<div class="mt-stack-lg flex flex-wrap gap-gutter">
+<button class="bg-vibe-red text-white font-label-bold py-4 px-8 rounded-lg hard-shadow-black btn-active transition-all text-lg hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none">
+                        Mulai Berburu
+                    </button>
+<button class="bg-white border-2 border-on-surface text-on-surface font-label-bold py-4 px-8 rounded-lg hover:bg-surface-container transition-all text-lg">
+                        Lihat Katalog
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-32 h-32 bg-sun-yellow rounded-full -z-10 animate-pulse"></div>
+<div class="relative border-4 border-on-surface rounded-xl overflow-hidden hard-shadow-black bg-white aspect-[4/5]">
+<img alt="Hero Model" class="w-full h-full object-cover" data-alt="A stylish young woman dressed in eclectic colorful vintage streetwear posing against a vibrant graffiti wall in a trendy urban setting. She wears a bold oversized neon jacket, chunky sneakers, and retro-tinted sunglasses. The lighting is high-contrast afternoon sun, creating sharp shadows and emphasizing the saturated red and yellow tones of the clothing. The overall aesthetic is high-energy, modern retro-pop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDshbHXFqcXOk9r4VEbx9zcyHbHVrw1kMXFK8LAka9gFUNQZQRqEGWDVK8jeVkUfEy7HFoH8XlQx_09sphT00p2OXnm9LM-1y9r6nH5LeW65FCkVT0jg7UoBqJUxccfN4F-xjA9wOpBke3Fg31oTqF4kX-o_vwhwKf18gyHvjhiM_X6LxBGD7yp_HpMH_UoBmNyoEzI9EbyQ3uhf0k6xEYygNsjvpbtgQmncLqokzKOFkAJQTR14wAZfgrBwn_O-D1RKDsNbpTQraIw"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-blush-base text-white p-4 hard-shadow-black rounded-lg transform rotate-3">
+<p class="font-headline-lg text-headline-lg">70% OFF</p>
+<p class="font-label-bold">Vintage Picks</p>
+</div>
+</div>
+</div>
+<!-- Decorative Shapes -->
+<div class="absolute top-1/4 right-0 w-64 h-64 bg-primary-fixed-dim rounded-full blur-[100px] opacity-20"></div>
+<div class="absolute bottom-1/4 left-0 w-96 h-96 bg-secondary-fixed-dim rounded-full blur-[120px] opacity-20"></div>
+</section>
+<!-- Eco-Conscious Banner -->
+<section class="bg-primary-container text-white py-section-gap relative overflow-hidden">
+<div class="container mx-auto px-container-margin relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<div class="bg-white p-2 rounded-xl hard-shadow-black rotate-[-2deg] max-w-sm">
+<img alt="Eco Life" class="rounded-lg w-full aspect-square object-cover" data-alt="Close up of lush green plants growing inside a recycled glass jar, placed in front of a soft-focus eco-conscious clothing rack. The scene is bathed in natural morning light, creating a serene and hopeful mood. The color palette emphasizes deep earth greens and warm wood textures, perfectly aligned with a sustainable lifestyle and mindful consumption vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXXqB4rYLIOoxzffKn61uXBdzWfJBzRsvfVsk7w_xWKvq8wLAj_mm5YIaJcTBZwPLD3S02yEpEStP5QyLVSW8JDiB8JE7XurA7fDstXdFClW9cCtRVmObMmH-m9aamueXyuoCjUzjU8w-Irphvf5v-93zXLqI9DFae2uWqO0anULx9pqJ__RdNsZbUnz9zKad7VV9bDoUd9KsvOcpFFHTIjaPFProYUk5i2w20Kv4TTV23QD6FUtviPFvaP8H2lw-022H5m9ORwId0"/>
+</div>
+</div>
+<div class="md:w-1/2 flex flex-col gap-stack-md">
+<span class="bg-sun-yellow text-on-secondary-fixed px-3 py-1 rounded-full font-label-bold w-fit">ECO-CONSCIOUS ACTION</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl">Keren buat gaya,<br/>baik buat bumi.</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-xl">
+                        Setiap potong baju pre-loved yang kamu pilih membantu mengurangi sampah tekstil dan menghemat ribuan liter air. Bergaya nggak harus ngerusak lingkungan, kan?
+                    </p>
+<div class="flex gap-stack-lg mt-base">
+<div class="flex flex-col">
+<span class="text-3xl font-black">2.5k+</span>
+<span class="font-label-bold opacity-70">Baju Terselamatkan</span>
+</div>
+<div class="w-px h-12 bg-white/20"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">1.2M+</span>
+<span class="font-label-bold opacity-70">Liter Air Dihemat</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Categories: Bento Style -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="container mx-auto px-container-margin">
+<div class="flex justify-between items-end mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-eco-maroon">Cari Berdasarkan Vibe</h2>
+<a class="text-primary font-label-bold hover:underline" href="#">Lihat Semua Vibe →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<!-- Retro -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl border-2 border-on-surface hard-shadow-black transition-all cursor-pointer">
+<img alt="Retro Vibe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A collection of vibrant 90s retro jackets and accessories spread out on a wooden floor. The lighting is warm and nostalgic, using a slightly grainy filter to enhance the vintage feel. Colors include bold primary reds, electric blues, and sunny yellows. The composition is dynamic, showing an energetic mix of textures and patterns typical of the 90s era." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1uGaoUMu_iNP3smAAJu9e2LcwvQmCS7LGnW7ODbjpn9w-ZiPPPkNkJeFQrXU5MOcO16NdTLm_9QTu_I3lMngfAA4sQpCYO2enPVqYD3A58u2oagR6lrAk93iOPWNDhHGEuLTYtWQH0kPSRdPqvgKt9a8SZERSrK0ixq8O6Maxqt1SJ0Y0EbInKMdNgZpDnQxyI6_DSYLi_Ps07SqByYMSO7duOSW4-v4Cw4ZKXWm5J-znV3kodNwBFeTCryQ9XaakRRZSWJKwA-kj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-xl text-headline-lg">Retro 90s</h3>
+<p class="font-body-md opacity-80">Bold, Loud, and Iconic.</p>
+</div>
+</div>
+<!-- Y2K -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl border-2 border-on-surface hard-shadow-black transition-all cursor-pointer">
+<img alt="Y2K Vibe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern Y2K aesthetic fashion shot featuring metallic silver fabrics, small tinted glasses, and butterfly clips. The lighting is cool-toned with purple and pink neon highlights, creating a futuristic yet nostalgic millennium vibe. High-gloss finishes and synthetic textures are prominent, presented in a clean and stylish way for a modern shopper." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaS6osR0O_PQiXJxq8z4XuDNraGt9P3qfd06bIB_3D3sn_plEhI7N4ZYIes49D1hhZ_EAtkX4NdqU-cqdIkAABGgv81tta5LyzndfTvL02q3kjL04a-nGN23bgWYQ4cx_8LWmkWhDWUyrJ7f9z5YLT3i-XOGYtGynxMf37Lm2LxdTSfER4mRGeojcoUVruuarN7VL03YZiGWR1mozdwTpQ60k1IfUZP2BGwkCBp30HFZYBDWHDhpSATu2CHdj3ACOo1OLEnDhxJh7R"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-lg text-headline-lg">Y2K Chic</h3>
+<p class="font-body-md opacity-80">Glitter, Metallics, and Fun.</p>
+</div>
+</div>
+<!-- Earthy -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl border-2 border-on-surface hard-shadow-black transition-all cursor-pointer">
+<img alt="Earthy Vibe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist collection of earthy-toned linen and cotton garments hanging on a simple bamboo rack. The lighting is soft, diffused daylight from a nearby window, creating a calm and sustainable atmosphere. Colors include beige, olive green, terracotta, and soft cream. The focus is on natural textures and timeless quality, promoting a slow fashion and eco-conscious lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp8iWgI08EpC4ctH69J38IpT02dY2Sb-Oq1klI0eGyjEzkEaK02vLTKnDOPOXCKPk-ZTngHo1mIixtAqjFLzWrDy1m9apZn2OWj722PxzfAGUplGLwzgSw92sR-Nl3JYOguy7GlpdvkkaXvAAdzwOTS8Vnz_3FANwuqprX8DLQ7brXHAh9okIApiTJZM7GOCx1tHHFYRycmH3TXVWEg1JA9qYC4zDo-VK0btvu1HNSkEWcYWFfOND9B0okuuhJ-QSFTMTJ4XPwCYzI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h3 class="font-headline-lg text-headline-lg">Earthy Tones</h3>
+<p class="font-body-md opacity-80">Neutral, Natural, and Calm.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-section-gap">
+<div class="container mx-auto px-container-margin">
+<div class="flex flex-col md:flex-row justify-between items-center mb-section-gap gap-stack-md">
+<div class="text-center md:text-left">
+<h2 class="font-headline-xl text-primary mb-stack-sm">Hot Drop Pekan Ini</h2>
+<p class="font-body-lg text-on-surface-variant">Kurasi terbaik pilihan stylist kami, khusus buat kamu.</p>
+</div>
+<button class="border-2 border-primary text-primary font-label-bold py-3 px-6 rounded-lg hover:bg-primary hover:text-white transition-all flex items-center gap-2">
+                    Jelajahi Produk <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product 1 -->
+<div class="group flex flex-col gap-stack-md">
+<div class="relative bg-white border-2 border-on-surface rounded-xl overflow-hidden hard-shadow-black transition-all duration-300 vibe-card-hover aspect-square">
+<img alt="Product 1" class="w-full h-full object-cover" data-alt="A vintage 1990s color-block windbreaker jacket in vibrant purple, teal, and yellow hues. The jacket is presented on a clean white studio background with professional shadow-less lighting to highlight its crisp vintage texture and bright colors. The style is unapologetically retro-pop, showcasing the unique 'thrifted' character of the piece." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWMGtP_Xw_Yx8tAY57LJ35Bzs9cS0BT8NROSIkv8VMV-lHDWNQk18DqGbNUgsNTNYpA9zgv7b_V2H-Y9xF1QnokeUgzaDCYtjg4108IpiaGQcKPGHOLFODC0AIy42nF_RreaZvWChykKF49WhQOsE-LEce7UtTtCyH7G3tRrJYahQhB_pD4_ahIsbAHnbRS5R6ArnzfLLNx_8xP-6LWEVyM6PBxKgRnVTsibqyhZNJLIMn7ZmjPGoJSXN_fd_DEw5SxPSQ1eeMGbUR"/>
+<div class="absolute top-4 right-4">
+<span class="bg-sun-yellow text-on-surface font-label-bold px-3 py-1 rounded-full text-sm shadow-sm border border-on-surface">VINTAGE</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-1">90s Retro Windbreaker</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-earth-moss/10 text-earth-moss px-2 py-0.5 rounded text-xs font-bold uppercase">Eco-Saved 300L Water</span>
+</div>
+<p class="font-headline-lg text-blush-base">Rp 245.000</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col gap-stack-md md:mt-8">
+<div class="relative bg-white border-2 border-on-surface rounded-xl overflow-hidden hard-shadow-black transition-all duration-300 vibe-card-hover aspect-square">
+<img alt="Product 2" class="w-full h-full object-cover" data-alt="A pair of well-worn vintage high-waisted denim jeans with a classic light wash and natural distressing. Photographed in a bright, airy studio setting with soft side-lighting to emphasize the denim grain and authentic wear marks. The styling is clean and modern, promoting the timeless and durable quality of thrifted denim fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF1xw80DHNMjpZp1-_7kvKxTIeVjk5XIUvtMlaNeROkPoSUUt_4wd782-u4lZOEAqb4tG5Duf3jg3awMbibbqVbwBSTxkd6mBg0ouf4_66b6znS6nkgTg3uC5UBldIVd_ph78a8lVmFTOFdScPwxZr6gE4bdvE-gPCPBC4waDb3dwlhq1A1pmYkEsBfgQtGlhghEnNZtf7fhrW0yZ3aDcoS0zKdMMQm75Klbhjzb9O1bohXDsTJI0lpNhJMN3kzC3io1FW_UirVmls"/>
+<div class="absolute top-4 right-4">
+<span class="bg-sun-yellow text-on-surface font-label-bold px-3 py-1 rounded-full text-sm shadow-sm border border-on-surface">CURATED</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-1">Classic High-Waist Denim</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-earth-moss/10 text-earth-moss px-2 py-0.5 rounded text-xs font-bold uppercase">100% Recycled Fabric</span>
+</div>
+<p class="font-headline-lg text-blush-base">Rp 189.000</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col gap-stack-md">
+<div class="relative bg-white border-2 border-on-surface rounded-xl overflow-hidden hard-shadow-black transition-all duration-300 vibe-card-hover aspect-square">
+<img alt="Product 3" class="w-full h-full object-cover" data-alt="A curated oversized flannel shirt in a warm palette of red, brown, and ochre plaid. The shirt is draped artistically over a minimalist wooden chair in a sun-drenched loft studio. The atmosphere is cozy and relatable, using soft focus backgrounds and natural textures to evoke a sense of comfortable, conscious style. The lighting is golden-hour warm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApHJeVdVMRhVrAwuKN-XYcw1Td72c84AzvETIN3MX5_IejUHsfu5bmqMKLdgUmB4FG1fe_L5lZiKNBCj_Tyz3APJRadjslybJR7rgXpI_Q48ksgZxzYqVdL8gLI-nDr-D7zQBtVSrX53ea_P33-uWLCLYt2_-cSvPg9OIa0blKT1bCjaAfh_rRsGkcQI-SAAHdMFgLKdosk3M3i27GSQJ-1KlpJh3cfdHis2rM2gt_nc-7jjthfNh2vEa0agPXHnjvhdasr-oly2Jy"/>
+<div class="absolute top-4 right-4">
+<span class="bg-sun-yellow text-on-surface font-label-bold px-3 py-1 rounded-full text-sm shadow-sm border border-on-surface">Y2K</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-1">Oversized Flannel Vibe</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-earth-moss/10 text-earth-moss px-2 py-0.5 rounded text-xs font-bold uppercase">Pre-Loved Excellence</span>
+</div>
+<p class="font-headline-lg text-blush-base">Rp 125.000</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Callout -->
+<section class="py-section-gap px-container-margin">
+<div class="max-w-4xl mx-auto bg-sun-yellow p-12 rounded-2xl border-4 border-on-surface hard-shadow-black flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-center md:text-left">
+<h2 class="font-headline-xl text-on-surface mb-stack-md">Gabung Vibe-Squad!</h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-lg">Dapatkan info drop produk terbaru dan tips styling ramah lingkungan langsung di inbox-mu.</p>
+<div class="flex flex-col sm:flex-row gap-stack-sm">
+<input class="flex-1 p-4 rounded-lg border-2 border-on-surface focus:ring-primary focus:border-primary" placeholder="Email kamu di sini..." type="email"/>
+<button class="bg-primary text-white font-label-bold py-4 px-8 rounded-lg hard-shadow-black btn-active">JOIN NOW</button>
+</div>
+</div>
+<div class="w-32 h-32 md:w-48 md:h-48 relative flex-shrink-0 animate-bounce">
+<span class="material-symbols-outlined text-[100px] md:text-[150px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t-2 border-eco-maroon mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-container-margin w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-stack-sm">
+<div class="flex items-center gap-2">
+<img alt="ThriftVibe Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWZFxSVZB3BZ1gu1M5d9UDOSYnBsf3000ai7Xx47NK_zo7vgWbQ5TqOev_QHld307-Pqn5qP8omty8aZxJFN1qBw7iLg25bt1H63gzvy5o3mlhVMStZt3UBzGI0mopRYWeW1iRbLtEgnoHp-c5oThEkDOXkXgIqS2kHFqtTzFLNGXMZjwW9AnoRbEBq4PE4AmtStOM5dGfTPM3_d0SvU2mpki5FpEongpRI45opOikc1HIWyarLQo9X0aNO9XXNw9xstXvj6Xq5Ip2"/>
+<span class="font-headline-lg text-headline-lg font-black text-eco-maroon">ThriftVibe</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-center md:text-left">© 2024 ThriftVibe. Good for the planet, better for your style.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-gutter">
+<a class="font-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">TikTok</a>
+<a class="font-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Sustainability Report</a>
+<a class="font-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.95)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+            });
+        });
+
+        // Marquee animation style injection
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                display: flex;
+                animation: marquee 20s linear infinite;
+                width: max-content;
+            }
+        `;
+        document.head.append(style);
+    </script>
+</body></html>
