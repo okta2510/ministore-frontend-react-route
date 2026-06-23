@@ -1,18 +1,26 @@
 import { useState } from 'react'
-import { Link, useParams, Navigate } from 'react-router-dom'
+import { Link, useParams, Navigate, useNavigate } from 'react-router-dom'
 import {
   getProductById,
   getRelatedProducts,
   formatPrice,
 } from '../data/products'
+import { useCart } from '../hooks/useCart'
 
 const sizes = ['M', 'L', 'XL']
 
 export default function ProductDetailPage() {
   const { id } = useParams()
+  const navigate = useNavigate()
+  const { addToCart } = useCart()
   const product = getProductById(id)
   const [selectedSize, setSelectedSize] = useState('L')
   const [mainImage, setMainImage] = useState(0)
+
+  const handleAddToCart = () => {
+    addToCart(product.id, selectedSize)
+    navigate('/cart')
+  }
 
   if (!product) {
     return <Navigate to="/products" replace />
@@ -118,6 +126,7 @@ export default function ProductDetailPage() {
           <div className="pt-4 space-y-4">
             <button
               type="button"
+              onClick={handleAddToCart}
               className="w-full py-5 bg-blush-base text-white font-headline-lg border-2 border-on-surface-variant block-shadow active-push transition-all flex items-center justify-center gap-3"
             >
               Bungkus Sekarang!

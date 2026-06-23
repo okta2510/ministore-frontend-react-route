@@ -3,6 +3,7 @@ import Layout from './components/layout/Layout'
 import HomePage from './pages/HomePage'
 import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
+import CartPage from './pages/CartPage'
 
 function App() {
   return (
@@ -40,6 +41,14 @@ function App() {
         }
       >
         <Route path="products/:id" element={<ProductDetailPage />} />
+      </Route>
+
+      <Route
+        element={
+          <Layout navbarVariant="cart" showMarquee={false} showFooterLogo={false} />
+        }
+      >
+        <Route path="cart" element={<CartPage />} />
       </Route>
     </Routes>
   )

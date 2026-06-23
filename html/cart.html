@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ThriftVibe | Your Sustainable Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffd9df",
+                    "surface": "#fcf9f8",
+                    "sun-yellow": "#FEEC41",
+                    "inverse-surface": "#313030",
+                    "surface-container": "#f0eded",
+                    "secondary-fixed-dim": "#dac917",
+                    "outline": "#906f6e",
+                    "on-secondary-container": "#6d6400",
+                    "on-tertiary-fixed": "#3f0017",
+                    "surface-tint": "#bf002c",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#ffb1c1",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#e5bdbc",
+                    "background": "#fcf9f8",
+                    "secondary-container": "#f4e237",
+                    "blush-base": "#F13E5A",
+                    "secondary-fixed": "#f7e53a",
+                    "on-secondary-fixed-variant": "#4f4800",
+                    "primary": "#ad0027",
+                    "on-tertiary-fixed-variant": "#89153e",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-bright": "#fcf9f8",
+                    "eco-maroon": "#760031",
+                    "on-secondary-fixed": "#1f1c00",
+                    "inverse-primary": "#ffb3b2",
+                    "on-tertiary-container": "#ffecee",
+                    "secondary": "#686000",
+                    "primary-container": "#d51c39",
+                    "tertiary-container": "#bd3f64",
+                    "primary-fixed": "#ffdad9",
+                    "tertiary": "#9d264c",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#920020",
+                    "on-background": "#1c1b1b",
+                    "on-surface-variant": "#5c3f3f",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#410008",
+                    "on-surface": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "earth-moss": "#C5B518",
+                    "primary-fixed-dim": "#ffb3b2",
+                    "surface-variant": "#e5e2e1",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#ffeceb",
+                    "vibe-red": "#FF6060"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px",
+                    "stack-sm": "4px",
+                    "gutter": "16px",
+                    "container-margin": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Bricolage Grotesque"],
+                    "headline-xl": ["Bricolage Grotesque"],
+                    "label-bold": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(118, 0, 49, 1);
+        }
+        .hard-shadow-hover:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(118, 0, 49, 1);
+        }
+        .bento-stagger {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b-2 border-on-surface-variant h-20 shadow-[4px_4px_0px_0px_rgba(118,0,49,1)]">
+<div class="flex justify-between items-center px-container-margin h-full w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-lg text-headline-lg font-black text-primary" href="#">ThriftVibe</a>
+<nav class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Shop</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Earth-Friendly</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative group">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-vibe-red text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-white">2</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-container-margin py-section-gap min-h-[819px]">
+<!-- Page Title -->
+<div class="mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary leading-tight">Your Vibe Check.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Ready to give these gems a second life?</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+<!-- Cart Items (List) -->
+<div class="lg:col-span-2 space-y-6">
+<!-- Product Card 1 -->
+<div class="bg-white border-2 border-on-background p-6 rounded-lg flex flex-col md:flex-row gap-6 hard-shadow relative group">
+<div class="w-full md:w-40 h-40 bg-surface-container-highest rounded-lg overflow-hidden flex-shrink-0 border-2 border-on-background">
+<img alt="Retro Flannel" class="w-full h-full object-cover" data-alt="A vintage oversized retro flannel shirt with a classic plaid pattern in deep reds and earth tones. The shirt is displayed in a brightly lit, modern minimalist photography studio with sharp shadows and clean white backgrounds. The texture of the high-quality pre-loved wool fabric is visible, emphasizing its sustainable and premium nature. The lighting is high-contrast, matching a vibrant 90s retro-pop aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJfMpxGZKkHl5FZyfFm64THUu012gx1aNsvGwMkLgTciLVamQ1ah6cO8e0JKocJSq9UpQUZ0ieCfh6hFhe5WEBwVHBM6Vga46gM9v7XRIgRZngk1iFfCUliGmk8AJgFzZn2au0BA_sN5jK-DZ4gtlJz5C6f4h8DVq1vc78yN_maxbJWsIEjFfiVezfoBwhFZy0M0IWLJ8Ox5-XmcSoTeH9dvuT8KLBAa-_fU0kw-WBbfDueLFh-OAq2MuVZlTtKfIJzXNWOWNbqLIS"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-headline-lg text-on-background">Retro Flannel</h3>
+<button class="text-on-surface-variant hover:text-vibe-red transition-colors active:scale-90">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<p class="font-body-md text-on-surface-variant">Size: L • Condition: Excellent</p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-sun-yellow text-on-secondary-fixed font-label-bold text-label-bold px-3 py-1 rounded-full border border-on-background">90s Vintage</span>
+<span class="bg-earth-moss text-white font-label-bold text-label-bold px-3 py-1 rounded-full border border-on-background">Eco-Conscious</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex justify-between items-end">
+<div class="flex items-center border-2 border-on-background rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 font-bold border-x-2 border-on-background">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<p class="font-headline-lg text-headline-lg text-eco-maroon">Rp 185.000</p>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white border-2 border-on-background p-6 rounded-lg flex flex-col md:flex-row gap-6 hard-shadow relative group">
+<div class="w-full md:w-40 h-40 bg-surface-container-highest rounded-lg overflow-hidden flex-shrink-0 border-2 border-on-background">
+<img alt="Y2K Pants" class="w-full h-full object-cover" data-alt="A pair of stylish wide-leg Y2K era cargo pants in a neutral khaki tone with multiple utility pockets. The pants are laid out in a dynamic, staggered fashion on a bright surface with bold, hard-edged shadows characteristic of modern retro-pop design. The setting is clean and high-fashion, with vibrant accents of blush red in the background, conveying an energetic and confident sustainable style choice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0YKgu0qKOReBHquV6-NrNxNe9qytZGSx-0WB7Qe0HIF8msVNaRQf0VnwTBJKUPIs5NoSTITVNWkOmGcz9jYphOlX9LwhvyPBLba-KsRbPEdWzVx2V8eHEisIiTCZO3NYL5DzUIubzEHD8NuWKOWsMEpK9GjsMSje4eY4FZelElD9UTaE31Hwn9uIGwqJWvcnH21-cr5UHTvXhvAKi1ALhfDWwQmFoaH139xOCYcf8MO75JenJFXUEuXDCUF7FmSqC6pMEZlS_OkSc"/>
+</div>
+<div class="flex flex-col justify-between flex-grow">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-headline-lg text-on-background">Y2K Pants</h3>
+<button class="text-on-surface-variant hover:text-vibe-red transition-colors active:scale-90">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<p class="font-body-md text-on-surface-variant">Size: 32 • Condition: Like New</p>
+<div class="mt-4 flex flex-wrap gap-2">
+<span class="bg-sun-yellow text-on-secondary-fixed font-label-bold text-label-bold px-3 py-1 rounded-full border border-on-background">Curated</span>
+<span class="bg-earth-moss text-white font-label-bold text-label-bold px-3 py-1 rounded-full border border-on-background">Low Impact</span>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex justify-between items-end">
+<div class="flex items-center border-2 border-on-background rounded-lg overflow-hidden">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 font-bold border-x-2 border-on-background">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<p class="font-headline-lg text-headline-lg text-eco-maroon">Rp 225.000</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Sidebar -->
+<aside class="space-y-6">
+<!-- Conscious Messaging Bar -->
+<div class="bg-earth-moss p-4 rounded-lg border-2 border-on-background text-white flex gap-3 items-center hard-shadow">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">eco</span>
+<p class="font-label-bold text-label-bold">Pilihan cerdas! Kamu baru saja menghemat 5000 liter air dengan memilih pre-loved.</p>
+</div>
+<!-- Order Summary -->
+<div class="bg-surface-container p-8 rounded-lg border-2 border-on-background space-y-6 hard-shadow">
+<h2 class="font-headline-lg text-headline-lg text-primary">Summary</h2>
+<div class="space-y-3">
+<div class="flex justify-between font-body-md">
+<span class="text-on-surface-variant">Subtotal (2 Items)</span>
+<span class="font-bold">Rp 410.000</span>
+</div>
+<div class="flex justify-between font-body-md">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="font-bold">Rp 15.000</span>
+</div>
+<div class="flex justify-between font-body-md">
+<span class="text-on-surface-variant">Carbon Offset</span>
+<span class="font-bold text-earth-moss">Rp 0 (FREE)</span>
+</div>
+</div>
+<div class="h-px bg-on-surface-variant opacity-20"></div>
+<div class="flex justify-between items-center">
+<span class="font-headline-lg text-headline-lg">Total</span>
+<span class="font-headline-lg text-headline-lg text-eco-maroon">Rp 425.000</span>
+</div>
+<button class="w-full bg-vibe-red text-white py-4 rounded-lg font-headline-lg text-headline-lg-mobile border-2 border-on-background hard-shadow hard-shadow-hover transition-all flex items-center justify-center gap-2 group">
+                        Amankan Vibe-mu
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="text-label-bold">Secure payment via ThriftVibe Pay</span>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="bg-white p-4 rounded-lg border-2 border-on-background hard-shadow">
+<label class="block font-label-bold mb-2" for="promo">Have a vibe code?</label>
+<div class="flex gap-2">
+<input class="flex-grow border-2 border-on-background rounded-lg px-4 py-2 focus:ring-0 focus:border-primary outline-none bg-surface-container-low" id="promo" placeholder="Enter code" type="text"/>
+<button class="bg-sun-yellow px-4 py-2 border-2 border-on-background rounded-lg font-label-bold hover:bg-secondary-fixed transition-colors active:scale-95">Apply</button>
+</div>
+</div>
+</aside>
+</div>
+<!-- Hidden Empty State (For demonstration, usually toggled by JS) -->
+<section class="hidden flex-col items-center justify-center py-20 text-center space-y-8" id="empty-cart-state">
+<div class="relative w-64 h-64">
+<div class="absolute inset-0 bg-sun-yellow rounded-full scale-75 blur-2xl opacity-30 animate-pulse"></div>
+<span class="material-symbols-outlined text-[120px] text-on-surface-variant" style="font-variation-settings: 'FILL' 0, 'wght' 200;">shopping_bag</span>
+</div>
+<div class="max-w-md">
+<h2 class="font-headline-xl text-headline-xl text-primary">Your vibe is currently empty.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Don't let your style wait! Thousands of pre-loved gems are looking for a new home.</p>
+</div>
+<a class="bg-primary text-white px-10 py-4 rounded-full font-headline-lg border-2 border-on-background hard-shadow hard-shadow-hover transition-all" href="#">Start Shopping</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t-2 border-eco-maroon">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-container-margin w-full max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg font-black text-eco-maroon mb-2">ThriftVibe</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">© 2024 ThriftVibe. Good for the planet, better for your style.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">TikTok</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">Sustainability Report</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-blush-base transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer: Simple JS to handle empty state toggle for preview -->
+<script>
+        // Micro-interaction for quantity buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const text = e.target.innerText;
+                if(text === '+' || text === '-') {
+                    const span = e.target.parentElement.querySelector('span');
+                    let val = parseInt(span.innerText);
+                    if(text === '+') val++;
+                    if(text === '-' && val > 1) val--;
+                    span.innerText = val;
+                }
+            });
+        });
+
+        // Delete animation
+        document.querySelectorAll('button .material-symbols-outlined').forEach(icon => {
+            if(icon.innerText === 'delete') {
+                icon.parentElement.addEventListener('click', (e) => {
+                    const card = e.target.closest('.group');
+                    card.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.9) translateX(-20px)';
+                    setTimeout(() => {
+                        card.remove();
+                        // Check if cart is empty to show empty state
+                        const cards = document.querySelectorAll('.lg\\:col-span-2 > div');
+                        if(cards.length === 0) {
+                            document.querySelector('.grid').style.display = 'none';
+                            document.querySelector('#empty-cart-state').classList.remove('hidden');
+                            document.querySelector('#empty-cart-state').classList.add('flex');
+                        }
+                    }, 500);
+                });
+            }
+        });
+    </script>
+</body></html>

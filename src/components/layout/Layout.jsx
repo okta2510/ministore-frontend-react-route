@@ -10,11 +10,12 @@ export default function Layout({
   showSearch = false,
   showFooterLogo = true,
   showMobileNav = false,
+  showMarquee = true,
 }) {
   return (
     <div className="bg-surface text-on-surface font-body-md overflow-x-hidden min-h-screen">
       <Navbar variant={navbarVariant} showSearch={showSearch} />
-      <MarqueeBar variant={marqueeVariant} />
+      {showMarquee && <MarqueeBar variant={marqueeVariant} />}
       <Outlet />
       <Footer showLogo={showFooterLogo} />
       {showMobileNav && <MobileNav />}
