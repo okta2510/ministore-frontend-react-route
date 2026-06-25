@@ -4,9 +4,10 @@ import { products, formatPrice } from '../data/products'
 
 const vibeFilters = ['Retro', 'Y2K', 'Earth-Tone', 'Street']
 
-const catalogProducts = products.filter((p) =>
-  ['retro-flannel-shirt', 'y2k-cargo-pants', 'earth-tone-vest'].includes(p.id),
-)
+// const catalogProducts = products.filter((p) =>
+//   ['retro-flannel-shirt', 'y2k-cargo-pants', 'earth-tone-vest'].includes(p.id),
+// )
+const catalogProducts = products
 
 export default function ProductsPage() {
   const [activeVibe, setActiveVibe] = useState('Retro')
