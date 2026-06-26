@@ -35,11 +35,12 @@ const navLinks = (
 
 export default function Navbar({ variant = 'home', showSearch = false }) {
   const isCart = variant === 'cart'
+  const isCheckout = variant === 'checkout'
 
   return (
     <header className="bg-surface sticky top-0 z-50 border-b-2 border-on-surface-variant h-20 shadow-[4px_4px_0px_0px_rgba(118,0,49,1)]">
       <div className="flex justify-between items-center px-container-margin h-full w-full max-w-7xl mx-auto">
-        {isCart ? (
+        {isCart || isCheckout ? (
           <div className="flex items-center gap-8">
             <Link
               to="/"
@@ -47,7 +48,7 @@ export default function Navbar({ variant = 'home', showSearch = false }) {
             >
               ThriftVibe
             </Link>
-            <nav className="hidden md:flex gap-6">{navLinks}</nav>
+            {!isCheckout && <nav className="hidden md:flex gap-6">{navLinks}</nav>}
           </div>
         ) : (
           <>
@@ -65,7 +66,17 @@ export default function Navbar({ variant = 'home', showSearch = false }) {
         )}
 
         <div className="flex items-center gap-gutter">
-          {!isCart && showSearch ? (
+          {isCheckout ? (
+            <Link
+              to="/cart"
+              className="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label-bold group"
+            >
+              <span className="material-symbols-outlined group-hover:-translate-x-1 transition-transform">
+                arrow_back
+              </span>
+              Back to Cart
+            </Link>
+          ) : !isCart && showSearch ? (
             <div className="hidden md:flex items-center bg-surface-container px-4 py-2 border-2 border-on-surface-variant">
               <span className="material-symbols-outlined text-on-surface-variant mr-2">
                 search
@@ -85,8 +96,8 @@ export default function Navbar({ variant = 'home', showSearch = false }) {
               </div>
             )
           )}
-          <CartButton filled={isCart} />
-          {!isCart && (
+          {!isCheckout && <CartButton filled={isCart} />}
+          {!isCart && !isCheckout && (
             <button type="button" className="md:hidden">
               <span className="material-symbols-outlined">menu</span>
             </button>

@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import ProductsPage from './pages/ProductsPage'
 import ProductDetailPage from './pages/ProductDetailPage'
 import CartPage from './pages/CartPage'
+import CheckoutPage from './pages/CheckoutPage'
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
         }
       >
         <Route path="cart" element={<CartPage />} />
+      </Route>
+
+      <Route
+        element={
+          <Layout navbarVariant="checkout" showMarquee={false} showFooterLogo={false} />
+        }
+      >
+        <Route path="checkout" element={<CheckoutPage />} />
       </Route>
     </Routes>
   )
