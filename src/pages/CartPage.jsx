@@ -179,15 +179,15 @@ export default function CartPage() {
                 {formatPrice(total)}
               </span>
             </div>
-            <button
-              type="button"
+            <Link
+              to="/checkout"
               className="w-full bg-vibe-red text-white py-4 rounded-lg font-headline-lg text-headline-lg-mobile border-2 border-on-background hard-shadow hard-shadow-hover transition-all flex items-center justify-center gap-2 group"
             >
               Amankan Vibe-mu
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                 arrow_forward
               </span>
-            </button>
+            </Link>
             <div className="flex items-center justify-center gap-2 text-on-surface-variant">
               <span className="material-symbols-outlined text-[18px]">
                 verified_user
